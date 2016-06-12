@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Coding House - iOS App development and training</title>
+     <link rel="shortcut icon" href="favicon.ico" />
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- CSS 
@@ -160,7 +161,7 @@
 					      		</div>
 					      		<div class="col-sm-12 col-md-5">
 					      			<div class="app-screenshot">
-					      				<img src="img/screenshots/app-1.png" class="img-responsive" alt="App Screen 1">
+					      				<img src="img/screenshots/learn1.png" class="img-responsive" alt="App Screen 1">
 					      			</div>
 					      		</div>
 					      	</div>
@@ -171,11 +172,11 @@
 					    			<h1>iOS - Application development for beginers.</h1>
 					    			<p>The course is designed to convert fresher’s students to industry standard iOS developers. On completion of this course you’ll be able to, Develop in Objective-C , Build your own native & scalable iOS apps for iPhone, iPad & iPod.</p>
 					    			<div class = "aLeft">
-<a  href="/assets/Beginers_iOS.pdf" download>Download details</a></div>
+<a  href="assets/Beginers_iOS.pdf" download>Download details</a></div>
 					    		</div>
 					    		<div class="col-sm-12 col-md-5">
 					    			<div class="app-screenshot">
-					    				<img src="img/screenshots/app-2.png" class="img-responsive" alt="App Screen 2">
+					    				<img src="img/screenshots/learn2.png" class="img-responsive" alt="App Screen 2">
 					    			</div>
 					    		</div>
 					    	</div>
@@ -188,11 +189,11 @@
 This is best suited for developers looking to get a head-start in getting your app idea onto the App store
 </p>
 <div class = "aLeft">
-<a  href="/assets/Advanced_iOS.pdf" download>Download details</a></div>
+<a  href="assets/Advanced_iOS.pdf" download>Download details</a></div>
 					      	</div>
 					      	<div class="col-sm-12 col-md-5">
 					      		<div class="app-screenshot">
-					      			<img src="img/screenshots/app-3.png" class="img-responsive" alt="App Screen 3">
+					      			<img src="img/screenshots/learn3.png" class="img-responsive" alt="App Screen 3">
 					      		</div>
 					      	</div>
 					      </div>
@@ -265,6 +266,7 @@ Our design team then works side-by-side with our developers to harmoniously crea
 	  		  <div class="row">
 	  			  <div class="col-md-12">
 	  			  	<h3>Connect with us</h3>
+	  			  	<!-- target="_blank" href="https://www.facebook.com/CodingHouse.in/"  -->
 	  			   	<a class="icon-facebook"></a>
 	  			   	<a class="icon-linkedin"></a>
 	  			   	<a class="icon-skype"></a>
@@ -295,11 +297,12 @@ Our design team then works side-by-side with our developers to harmoniously crea
 	  				<p class="lead">hr@codinghouse.in</p>
 	  			</div>
 	  			<div class="col-md-4">
-	  				<div id="googleMap" style="width:300px;height:250px;"></div>
+	  				<!-- <div id="googleMap" style="width:300px;height:250px;"></div> -->
+	  				<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3913.0104660158713!2d75.78962!3d11.260640000000002!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc7e3f16c939fd573!2sEmarald+Mall!5e0!3m2!1sen!2sus!4v1465749135436" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
 	  			</div>
 	  				<div class="col-md-4">
-	  				
-	  				<p class="lead">Find us</br>4th floor, Emerald Mall</br> Mavoor Rd, Arayidathupalam</br>Kozhikode</br>Kerala-673004</p>
+	  				<h4>Find us</h4>
+	  				<p class="lead">4th floor, Emerald Mall</br> Mavoor Road </br> Arayidathupalam</br>Kozhikode</br>Kerala-673004</p>
 	  				<!-- <button type="button" class="app-store"></button> -->
 	  			</div>
 
@@ -313,7 +316,7 @@ Our design team then works side-by-side with our developers to harmoniously crea
 	                
 	                	<!-- add link to privacy and terms page -->
 	                	
-	                	<li><a href="#link-here">Report a bug</a></li> 
+	                	<!-- <li><a href="#link-here">Report a bug</a></li>  -->
 	                	<!-- add mail to function in report a bug -->
                 	</ul>
 	  			</div>
@@ -337,14 +340,28 @@ Our design team then works side-by-side with our developers to harmoniously crea
     <script src="http://maps.googleapis.com/maps/api/js"></script>
 
     <script>
-function initialize() {
-  var mapProp = {
-    center:new google.maps.LatLng(51.508742,-0.120850),
-    zoom:5,
-    mapTypeId:google.maps.MapTypeId.ROADMAP
+
+var myCenter=new google.maps.LatLng(11.26,75.788);
+var marker;
+
+function initialize()
+{
+var mapProp = {
+  center:myCenter,
+  zoom:17,
+  mapTypeId:google.maps.MapTypeId.ROADMAP
   };
-  var map=new google.maps.Map(document.getElementById("googleMap"), mapProp);
+
+var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+var marker=new google.maps.Marker({
+  position:myCenter,
+  animation:google.maps.Animation.BOUNCE
+  });
+
+marker.setMap(map);
 }
+
 google.maps.event.addDomListener(window, 'load', initialize);
 </script>
   	

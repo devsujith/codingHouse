@@ -13,10 +13,32 @@ Primary style
   content: '';
 }
 
+
+.logo-coding{
+  display: inline-block; 
+  padding: 0px 0px 0px 0px;
+  color: #666666;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 2.25em;
+  font-family: 'Helvetica Bold', sans-serif;
+}
+
+.logo-house{
+  display: inline-block; 
+  padding: 0px 0px 0px 0px;
+  color: #ff9933;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 2.25em;
+  font-family: 'Helvetica Bold', sans-serif;
+}
+
 body {
   font-size: 100%;
   font-family: "Open Sans", sans-serif;
   color: #4e5359;
+  FF9E3D
   background-color: #f3f3f5;
 }
 body::after {
@@ -47,7 +69,7 @@ body.cd-overlay::after {
 }
 
 a {
-  color: #06b872;
+  color: #FF9E3D;
   text-decoration: none;
 }
 
@@ -59,10 +81,10 @@ Main components
 header {
   position: relative;
   height: 180px;
-  line-height: 180px;
+  line-height: 80px;
   text-align: center;
-  background-color: #06b872;
-  background: url('../img/bg2.jpg');
+  background-color: white;
+  background: url('../img/bg1.jpg');
 }
 header h1 {
   color: #ffffff;
@@ -181,7 +203,7 @@ header h1 {
     left: 0;
     height: 100%;
     width: 3px;
-    background-color: #06b872;
+    background-color: #FF9E3D;
     opacity: 0;
     -webkit-transition: opacity 0.2s;
     -moz-transition: opacity 0.2s;
